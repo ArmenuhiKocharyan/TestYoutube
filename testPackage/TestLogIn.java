@@ -19,8 +19,6 @@ public class TestLogIn extends WebDriverSettings {
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*/div[1]/div/div[1]/input")));
 
-        Thread.sleep(1000);
-
         //Write your password.
         driver.findElementByXPath("//*/div[1]/div/div[1]/input").sendKeys("your password");
 
