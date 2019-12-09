@@ -1,7 +1,7 @@
 YouTube TESTPROJECT
 
 This project is testing this functionalities on a YouTube web page and mediaplayer.
-1.to sign in registered account (file TestLogIn.java ). 
+1.to sign in registered account (file TestLogIn.java). 
 2. to scroll the video forward and backward (file TestForwardAndBack.java)
 3. to increase and decrease volume,  mute and enable sound (file TestVolume.java)
 4. to scroll homepage (file TestScroll.java)
@@ -11,8 +11,8 @@ The file WebDriverSettings.java conteins steps @BeforeTest and @AfterTest
 
 Background
 You need to install the following programs, tools and frameworks:
-IntelliJ IDEA
-յdk
+IntelliJ IDEA (version 2019.1.1 (Community Edition))
+յdk (version 1.8.0_222)
 Maven (version 3.3.9)
 Selenium webdriver (version 3.141.59)
 TestNG framework (version 7.0.0)
