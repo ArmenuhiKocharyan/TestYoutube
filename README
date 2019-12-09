@@ -13,10 +13,10 @@ Background
 You need to install the following programs, tools and frameworks:
 IntelliJ IDEA
 յdk
-Maven
-Selenium webdriver
-TestNG framework 
-chromedriver
+Maven (version 3.3.9)
+Selenium webdriver (version 3.141.59)
+TestNG framework (version 7.0.0)
+chromedriver (version 77.0.3865.40)
 ...
 Example
 1. Create a maven project in IntelliJ IDEA.
