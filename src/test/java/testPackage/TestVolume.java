@@ -14,9 +14,9 @@ public class TestVolume extends WebDriverSettings {
 
         driver.findElement(By.xpath("//*[@id=\"img\"]")).click();
 
-        driver.findElement(By.xpath("//*/div[2]/div[1]/button")).click();
+        driver.findElement(By.className("ytp-play-button")).click();
 
-        driver.findElement(By.xpath("//*/div[2]/div[1]/button")).click();
+        driver.findElement(By.className("ytp-play-button")).click();
 
         actions.sendKeys(Keys.CONTROL + "m").build().perform();
 

@@ -10,18 +10,18 @@ public class TestLogIn extends WebDriverSettings {
     @Test
     public void getURL() throws InterruptedException {
 
-        driver.findElementByXPath("//*/div[2]/div[2]/ytd-button-renderer/a/paper-button").click();
+        driver.findElement(By.cssSelector("paper-button#button.style-scope.ytd-button-renderer.style-suggestive.size-small")).click();
 
         //Write your email.
         driver.findElement(By.id("identifierId")).sendKeys("your email");
 
-        driver.findElementByXPath("//*/div[2]/div/div[1]/div/span").click();
+        driver.findElementByCssSelector("span.RveJvd.snByac").click();
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*/div[1]/div/div[1]/input")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("span.RveJvd.snByac")));
 
         //Write your password.
-        driver.findElementByXPath("//*/div[1]/div/div[1]/input").sendKeys("your password");
+        driver.findElementByCssSelector("input.whsOnd.zHQkBf").sendKeys("your password");
 
-        driver.findElementByXPath("//*/div/div[1]/div/span/span").click();
+        driver.findElementByCssSelector("span.RveJvd.snByac").click();
     }
 }

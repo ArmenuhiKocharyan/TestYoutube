@@ -12,7 +12,7 @@ public class TestSubtitle extends WebDriverSettings {
 
         driver.findElement(By.xpath("//*[@id=\"img\"]")).click();
 
-        Assert.assertTrue(driver.findElement(By.xpath("//*/div[2]/div[2]/button[2]")).isDisplayed()); {
+        Assert.assertTrue(driver.findElement(By.cssSelector(".ytp-subtitles-button")).isDisplayed()); {
             actions.sendKeys(Keys.CONTROL + "c").build().perform();
             actions.sendKeys(Keys.CONTROL + "c").build().perform();
         }
