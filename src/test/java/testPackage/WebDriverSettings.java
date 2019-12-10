@@ -25,6 +25,7 @@ public class WebDriverSettings {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 30);
         actions = new Actions(driver);
+
     }
 
     @AfterTest
