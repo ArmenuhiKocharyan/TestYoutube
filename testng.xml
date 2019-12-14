@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1">
+    <test name="Simple">
+        <parameter name="mail" value="${yourmail}"/>
+        <parameter name="password" value="${yourpassword}"/>
+        <classes>
+            <class name="testPackage.WebDriverSettings"/>
+            <class name="testPackage.TestLogIn"/>
+            <class name="testPackage.TestForwardAndBack"/>
+            <class name="testPackage.TestScroll"/>
+            <class name="testPackage.TestSubtitle"/>
+            <class name="testPackage.TestVolume"/>
+        </classes>
+    </test>
+</suite>

@@ -9,28 +9,20 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestSubtitle {
+public class TestSubtitle extends WebDriverSettings{
 
     @Test
     public void testSubtitles() throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
-        ChromeDriver driver = new ChromeDriver();
-        Actions actions = new Actions(driver);
 
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get("https://www.youtube.com");
-
-        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"img\"]")).isDisplayed());
-        driver.findElement(By.xpath("//*[@id=\"img\"]")).click();
+        Assert.assertTrue(driver.findElement(By.cssSelector("yt-formatted-string.style-scope.ytd-rich-grid-video-renderer")).isDisplayed());
+        driver.findElement(By.cssSelector("yt-formatted-string.style-scope.ytd-rich-grid-video-renderer")).click();
 
         Assert.assertTrue(driver.findElement(By.cssSelector(".ytp-subtitles-button")).isEnabled());
         {
             driver.findElement(By.cssSelector(".ytp-subtitles-button")).click();
         }
 
-        driver.quit();
     }
 }
 

@@ -16,14 +16,15 @@ IntelliJ IDEA (version 2019.1.1 (Community Edition))
 Maven (version 3.3.9)
 Selenium webdriver (version 3.141.59)
 TestNG framework (version 7.0.0)
-chromedriver (version 77.0.3865.40)
+Webdrivermanager (version 3.0.0)
+Maven-surefire-plugin (version 2.12.4)
+Maven-compiler-plugin (version 3.8.1)
+
 ...
 Example
 1. Create a maven project in IntelliJ IDEA.
-2. Add dependensies of Selenium webdriver and TestNG from the site mvnrepository.com (actual versions) into the pom.xml file.
-3. Download chrome driver from https://chromedriver.chromium.org 
-(the version of chromedriver need to comply with version of your GoogleChrome browser), add the path of chromedriver in your project. Exsample:
-System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver");
+2. Add dependensies of Selenium webdriver,TestNG, webdrivermanager and add plugins maven-surefire and maven-compiler from the site mvnrepository.com (actual versions) into the pom.xml file.
+3.In root of project create testng.xml file and add classes and parameters.
 
 Notes
 OS - Ubuntu1604 .

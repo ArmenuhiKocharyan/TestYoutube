@@ -1,27 +1,14 @@
 package testPackage;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
-public class TestForwardAndBack {
+public class TestForwardAndBack extends WebDriverSettings{
 
     @Test
     public void forwAndBack() throws InterruptedException {
-
-        WebDriverManager.chromedriver().setup();
-        ChromeDriver driver = new ChromeDriver();
-        Actions actions = new Actions(driver);
-
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get("https://www.youtube.com");
 
         Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"img\"]")).isEnabled());
         driver.findElement(By.xpath("//*[@id=\"img\"]")).click();
@@ -34,7 +21,6 @@ public class TestForwardAndBack {
             actions.sendKeys(Keys.ARROW_LEFT).build().perform();
         }
 
-        driver.quit();
     }
 
 }

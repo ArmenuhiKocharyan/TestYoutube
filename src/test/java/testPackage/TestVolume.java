@@ -10,21 +10,14 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestVolume {
+public class TestVolume extends WebDriverSettings{
 
     @Test
     public void testVolumeUpDown() throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
-        ChromeDriver driver = new ChromeDriver();
-        Actions actions = new Actions(driver);
-
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get("https://www.youtube.com");
-
-        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"img\"]")).isEnabled());
-        driver.findElement(By.xpath("//*[@id=\"img\"]")).click();
+        Assert.assertTrue(driver.findElement(By.cssSelector("yt-formatted-string.style-scope.ytd-rich-grid-video-renderer")).isDisplayed());
+        driver.findElement(By.cssSelector("yt-formatted-string.style-scope.ytd-rich-grid-video-renderer")).click();
+        Thread.sleep(500);
 
         Assert.assertTrue(driver.findElement(By.className("ytp-play-button")).isDisplayed());
         driver.findElement(By.className("ytp-play-button")).click();
@@ -50,6 +43,5 @@ public class TestVolume {
                 actions.sendKeys(Keys.ARROW_UP).build().perform();
             }
         }
-        driver.quit();
     }
 }
