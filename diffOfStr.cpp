@@ -71,3 +71,5 @@ void compare(std::string str1, std::string str2)
         }
     }
 }
+
+/// Please ignore this note
